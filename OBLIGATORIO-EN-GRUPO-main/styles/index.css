@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+main .ticket {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main .ticket h2 {
+    text-align: center;
+}
+
+#buscar {
+    width: 100%;
+}
+
+.juegos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.juegos li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 250px; /* Ajusta esta altura según sea necesario */
+}
+
+.juegos li img {
+    height: 100px;
+    width: 100px;
+}
+
+.juegos li span {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.juegos li button {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.juegos li button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+#carritoLista {
+    width: 253px; /* Ajusta el ancho según tu diseño */
+    padding: 30px; /* Ajusta el padding según sea necesario */
+  }
+  
