@@ -175,7 +175,7 @@ function documentOnLoad() {
 
     if (juegosDeStorage.length === 0) {
         cargarJuegos(JUEGOSPRECARGADOS);
-        console.log("Juegos cargados:", JUEGOSPR); 
+        console.log("Juegos cargados:", JUEGOSPRECARGADOS); 
         storageGuardarJuegos();
     } else {
         cargarJuegos(juegosDeStorage);

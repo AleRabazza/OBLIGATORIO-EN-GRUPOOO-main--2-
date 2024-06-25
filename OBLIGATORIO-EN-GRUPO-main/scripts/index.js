@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', documentOnLoad);
 const JUEGOS = [
     { id: 1, nombre: "Prince of Persia: The Lost Crown", precio: 100, img: "https://media.vandal.net/100/14/142947/prince-of-persia-the-lost-crown-202422310102789_1b.jpg" },
     { id: 2, nombre: "The Last of Us Parte II Remasterizado", precio: 100, img: "https://media.vandal.net/100/15/154258/the-last-of-us-parte-ii-remasterizado-202411911113128_1b.jpg" },
@@ -132,14 +133,22 @@ function comprarTodo() {
 
 
 function documentOnLoad() {
-    let juegosEnStorage = storageLeerJuegos();
-    cargarJuegos(juegosEnStorage);
-    console.log("Juegos cargados:", JUEGOS); 
+    console.log("El DOM ha sido cargado");
     document.getElementById("buscar").addEventListener("input", onKeyPressInputBuscar);
     document.getElementById("botonComprarTodos").addEventListener("click", comprarTodo);
+   
+    let juegosEnStorage = storageLeerJuegos();
+
+    if (juegosEnStorage.length === 0) {
+        cargarJuegos(JUEGOS);
+        console.log("Juegos cargados:", JUEGOS); 
+        storageLeerJuegos();
+    } else {
+        cargarJuegos(juegosEnStorage);
+    }
 
     renderizarJuegos(JUEGOS);
-   
+
 }
 
 function onKeyPressInputBuscar(evento) {
@@ -155,7 +164,6 @@ function onKeyPressInputBuscar(evento) {
     renderizarJuegos(juegosFiltrados);
 }
 
-document.addEventListener('DOMContentLoaded', documentOnLoad);
 
 function crearLiJuego(juego) {
     let li = document.createElement("li");
