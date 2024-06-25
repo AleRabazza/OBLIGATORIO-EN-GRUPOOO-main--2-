@@ -57,7 +57,7 @@ main .ticket h2 {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-height: 250px; /* Ajusta esta altura según sea necesario */
+    min-height: 250px; 
 }
 
 .juegos li img {
@@ -99,7 +99,7 @@ footer p {
 }
 
 #carritoLista {
-    width: 253px; /* Ajusta el ancho según tu diseño */
-    padding: 30px; /* Ajusta el padding según sea necesario */
+    width: 253px; 
+    padding: 30px; 
   }
   
