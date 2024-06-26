@@ -135,8 +135,6 @@ function renderizarJuegos() {
         fila = renderizarJuego(juego);
         tablaJuegos.appendChild(fila);
     }
-
-    document.getElementById("cardTotalJuegos").innerText = JUEGOS.length;
 }
 
 function cambiarAFormularioAgregar() {
