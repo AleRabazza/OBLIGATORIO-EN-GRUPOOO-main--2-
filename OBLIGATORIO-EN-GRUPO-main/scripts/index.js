@@ -101,8 +101,10 @@ function renderizarCarrito() {
         totalPrecio += cantidad * juego.precio;
     });
 
-    if (totalUnidades == 3) {
+    if (totalUnidades > 2) {
         totalPrecio *= 0.85;
+    }
+    if (totalUnidades == 3){
         alert("¡Se te aplicó un descuento del 15% por comprar más de 3 unidades!");
     }
 
