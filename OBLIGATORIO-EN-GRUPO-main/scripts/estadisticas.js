@@ -19,10 +19,15 @@ function mostrarEstadisticas() {
 }
 
 function mostrarEstadisticasGenerales(ventas) {
- 
-    let totalIngresos = ventas.reduce((total, venta) => total + venta.totalVendido, 0);
 
     let totalJuegosVendidos = ventas.reduce((total, venta) => total + venta.cantidad, 0);
+     
+    let totalIngresos
+    if(totalJuegosVendidos>= 3){
+        totalIngresos = ventas.reduce((total, venta) => total + venta.totalVendido * 0.85, 0);
+    } else{
+        totalIngresos = ventas.reduce((total, venta) => total + venta.totalVendido, 0);
+    }
 
     document.getElementById("totalingresos").innerText = totalIngresos;
     document.getElementById("totalJuegosvendidos").innerText = totalJuegosVendidos;
