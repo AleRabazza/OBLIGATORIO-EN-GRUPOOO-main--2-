@@ -128,7 +128,7 @@ function comprarTodo() {
     cargarVenta(ventas);
     CARRITO = [];
     renderizarCarrito();
-    alert("Compra realizada con éxito. Los detalles de la venta han sido guardados.");
+    alert("Gracias por su compra!");
 }
 
 
@@ -137,14 +137,11 @@ function documentOnLoad() {
     document.getElementById("buscar").addEventListener("input", onKeyPressInputBuscar);
     document.getElementById("botonComprarTodos").addEventListener("click", comprarTodo);
    
-    let juegosEnStorage = storageLeerJuegos();
-
-    if (juegosEnStorage.length === 0) {
-        cargarJuegos(JUEGOS);
-        console.log("Juegos cargados:", JUEGOS); 
-        storageLeerJuegos();
-    } else {
-        cargarJuegos(juegosEnStorage);
+    let JuegosEnStorage = storageLeerJuegos();
+        if (JUEGOS.length === 0) {
+            cargarJuegos(JuegosEnStorage)
+          } else {
+        cargarJuegos(JuegosEnStorage);
     }
 
     renderizarJuegos(JUEGOS);
